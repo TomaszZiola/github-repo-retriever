@@ -17,7 +17,7 @@ class GitHubRepositoryService {
                 .stream()
                 .filter(repo -> !repo.fork())
                 .map(repo -> {
-                    List<BranchDto> branches = githubClient.getBranches(username, repo.name())
+                    var branches = githubClient.getBranches(username, repo.name())
                             .stream()
                             .map(branch -> new BranchDto(branch.name(), branch.commit().sha()))
                             .toList();
