@@ -9,7 +9,7 @@ import org.wiremock.spring.ConfigureWireMock;
 import org.wiremock.spring.EnableWireMock;
 
 import static com.ziola.github_repo_retriever.utils.ApiStubs.stubExternalApis;
-import static com.ziola.github_repo_retriever.utils.ApiStubs.stubReposNotFound;
+import static com.ziola.github_repo_retriever.utils.ApiStubs.stubUserNotFound;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @EnableWireMock(
@@ -68,7 +68,7 @@ class GithubControllerIntegrationTest {
     @Test
     void shouldReturn404WhenUserNotFound() {
         // given
-        stubReposNotFound();
+        stubUserNotFound();
         var expectedJson = """
                         {
                             "status": 404,

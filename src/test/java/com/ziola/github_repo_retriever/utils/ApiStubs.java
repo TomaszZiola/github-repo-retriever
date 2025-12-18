@@ -21,7 +21,7 @@ public final class ApiStubs {
 
     private static final String BRANCHES_CONSORTIUM_RESPONSE_FILE = "wiremock/BranchesConsortium.json";
     private static final String BRANCHES_HELLO_WORLD_RESPONSE_FILE = "wiremock/BranchesHelloWorld.json";
-    private static final String NOT_FOUND_RESPONSE_FILE = "wiremock/UserNotfound.json";
+    private static final String NOT_FOUND_RESPONSE_FILE = "wiremock/UserNotFound.json";
     private static final String REPOS_OCTOCAT_RESPONSE_FILE = "wiremock/ReposOctocat.json";
 
     public static void stubExternalApis() {
@@ -41,7 +41,7 @@ public final class ApiStubs {
                         .withBody(fromFile(BRANCHES_HELLO_WORLD_RESPONSE_FILE))));
     }
 
-    public static void stubReposNotFound() {
+    public static void stubUserNotFound() {
         stubFor(get(urlEqualTo("/users/octocat/repos"))
                 .willReturn(aResponse()
                         .withStatus(404)
