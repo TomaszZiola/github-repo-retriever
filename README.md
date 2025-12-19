@@ -37,7 +37,7 @@ Example response
 Error handling
 - If the user is not found on GitHub, the service responds with HTTP 404:
 ```json
-{ "status": 404, "message": "User 'somebody' not found" }
+{ "status": 404, "message": "User not found on GitHub" }
 ```
 
 Configuration
