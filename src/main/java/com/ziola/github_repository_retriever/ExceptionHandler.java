@@ -1,4 +1,4 @@
-package com.ziola.github_repo_retriever;
+package com.ziola.github_repository_retriever;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

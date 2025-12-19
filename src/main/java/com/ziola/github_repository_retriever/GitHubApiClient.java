@@ -1,4 +1,4 @@
-package com.ziola.github_repo_retriever;
+package com.ziola.github_repository_retriever;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;

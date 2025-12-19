@@ -1,4 +1,4 @@
-package com.ziola.github_repo_retriever.integration;
+package com.ziola.github_repository_retriever.integration;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,8 +8,8 @@ import org.springframework.test.web.servlet.client.RestTestClient;
 import org.wiremock.spring.ConfigureWireMock;
 import org.wiremock.spring.EnableWireMock;
 
-import static com.ziola.github_repo_retriever.utils.ApiStubs.stubExternalApis;
-import static com.ziola.github_repo_retriever.utils.ApiStubs.stubUserNotFound;
+import static com.ziola.github_repository_retriever.utils.ApiStubs.stubExternalApis;
+import static com.ziola.github_repository_retriever.utils.ApiStubs.stubUserNotFound;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 import static org.springframework.test.web.servlet.client.RestTestClient.bindToServer;
 

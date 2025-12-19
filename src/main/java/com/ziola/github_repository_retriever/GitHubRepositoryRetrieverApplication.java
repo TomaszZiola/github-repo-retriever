@@ -1,4 +1,4 @@
-package com.ziola.github_repo_retriever;
+package com.ziola.github_repository_retriever;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

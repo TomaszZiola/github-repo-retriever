@@ -1,4 +1,4 @@
-package com.ziola.github_repo_retriever;
+package com.ziola.github_repository_retriever;
 
 class UserNotFoundException extends RuntimeException {
     UserNotFoundException(String message) {

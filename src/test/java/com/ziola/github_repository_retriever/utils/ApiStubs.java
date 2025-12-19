@@ -1,4 +1,4 @@
-package com.ziola.github_repo_retriever.utils;
+package com.ziola.github_repository_retriever.utils;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.StreamUtils;
