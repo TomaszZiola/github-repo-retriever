@@ -10,14 +10,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/github/users")
 class RepositoryController {
-    private final RepositoryService repositoryService;
+    private final RepositoryService service;
 
-    RepositoryController(RepositoryService repositoryService) {
-        this.repositoryService = repositoryService;
+    RepositoryController(RepositoryService service) {
+        this.service = service;
     }
 
     @GetMapping("/{username}")
     List<RepositoryDto> getUserRepositoriesWithBranches(@PathVariable String username) {
-        return repositoryService.getUserRepositoriesWithBranches(username);
+        return service.getUserRepositories(username);
     }
 }

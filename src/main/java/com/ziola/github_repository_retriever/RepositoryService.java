@@ -6,18 +6,18 @@ import java.util.List;
 
 @Service
 class RepositoryService {
-    private final GitHubApiClient githubClient;
+    private final GitHubApiClient client;
 
-    RepositoryService(GitHubApiClient githubClient) {
-        this.githubClient = githubClient;
+    RepositoryService(GitHubApiClient client) {
+        this.client = client;
     }
 
-    List<RepositoryDto> getUserRepositoriesWithBranches(String username) {
-        return githubClient.getRepositories(username)
+    List<RepositoryDto> getUserRepositories(String username) {
+        return client.getRepositories(username)
                 .stream()
                 .filter(repo -> !repo.fork())
                 .map(repo -> {
-                    var branches = githubClient.getBranches(username, repo.name())
+                    var branches = client.getBranches(username, repo.name())
                             .stream()
                             .map(branch -> new BranchDto(branch.name(), branch.commit().sha()))
                             .toList();
